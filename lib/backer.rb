@@ -3,8 +3,7 @@ require "pry"
 class Backer
 
     attr_reader :name, :backed_projects
-    attr_writer
-    attr_accessor 
+    
 
     def initialize(name)
         @name = name
@@ -13,7 +12,7 @@ class Backer
     end
     
     def back_project(project)
-        @backed_projects << project
+        self.backed_projects << project
         project.backers << self
     end
 
